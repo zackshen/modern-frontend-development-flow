@@ -37,6 +37,7 @@ npm, yarn, vite, webpack, babel, swc, esbuild, 都会简单带个例子说明下
 什么是SolidJS ? 
 什么是组件？
 什么是状态?
+数据驱动的UI，框架帮我们完成绘制，我们负责数据、状态处理
 Reactive 响应式编程
 React 函数式编程
 React Vue
@@ -89,3 +90,10 @@ e2e测试
 纯静态页面的部署, 可以使用vercel的服务来发布。
 
 带有web服务器的项目的部署：如果我们使用next.js编写，那么可以使用vercel的服务来发布。
+
+
+
+## 知识图谱
+
+![知识图谱](/images/前端知识图谱.png)
+
