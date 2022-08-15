@@ -1,3 +1,4 @@
+import React from "react";
 import { useRef } from "react";
 
 export interface TodoHeaderProps {
@@ -24,12 +25,14 @@ export const TodoHeader = (props: TodoHeaderProps) => {
     <header className="header">
       <h1>todos</h1>
       <input
+        data-testid="todo-content-input"
         ref={inputRef}
         className="new-todo"
         placeholder="What needs to be done?"
         onKeyDown={handleKeyDown}
       />
       <input
+        data-testid="markall-complete"
         id="toggle-all"
         className="toggle-all"
         type="checkbox"
