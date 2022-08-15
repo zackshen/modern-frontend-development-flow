@@ -10,6 +10,7 @@ export const TodoHeader = (props: TodoHeaderProps) => {
   const inputRef = useRef<HTMLInputElement>();
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.code === "Enter") {
+        // @ts-ignore
       const inputValue = (e.target?.value ?? "").trim();
       if (inputValue === "") {
         return;
@@ -24,9 +25,11 @@ export const TodoHeader = (props: TodoHeaderProps) => {
     <header className="header">
       <h1>todos</h1>
       <input
+        // @ts-ignore
         ref={inputRef}
         className="new-todo"
         placeholder="What needs to be done?"
+        // @ts-ignore
         onKeyDown={handleKeyDown}
       />
       <input
