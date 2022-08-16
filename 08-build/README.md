@@ -1,39 +1,35 @@
-# 08 部署
+# 08 构建
 
-## 本地部署，或者私有环境部署
+一般我们使用工具生成的项目，都会有自带的构建命令，可以在项目根目录下的`package.json`文件中的`scripts`中找到相应的构建命令。
 
-1. 静态文件的方式部署，将编译后的js，html，css部署到静态文件服务器，例如`nginx`。
+通常的默认构建命令是 ```npm run build```。
 
-    > 编译 `04-simple-todo-app` 
-    > ```shell
-    > npm run build 
-    > ```
-    > 这里会有类型错误，感兴趣的同学可以可以去修改使编译通过，我们可以修改package.json文件的build脚本
-    > ```
-    > "build": "vite build"
-    > ```
-    > ```shell
-    > npm run build
-    > ```
-    > 我们使用`http-server`来启动静态文件服务器
-    > ```shell
-    > npx http-server dist
-    > ```
-    > 在浏览器中访问 `http://localhost:8080`，我们就可以看到刚才的开发的Todo应用。
+## 用例：04-simple-todo-app
 
-2. 带有web服务器的部署，包含了Node.js。
+```
+npm run build
+```
 
-    > 编译 `06-fullstack-todo-app`
-    > ```shell
-    > npm run build
-    > ``` 
-    > 运行生产环境
-    > ```shell
-    > npm start
-    > ```
-    > 在浏览器中访问 `http://localhost:3000`，我们就可以访问刚才开发的Todo应用了。
+## 用例：05-todo-app-with-api
 
+```
+npm run build
+```
 
-## 使用云服务提供商来部署
+## 用例：06-fullstack-todo-app
 
-    我们使用 vercel 来部署 `06-fullstack-todo-app`。
+```
+npm run build
+```
+
+每个`build`命令背后使用的构建工具都是不一样的。
+
+现在主流的构建工具有 `webpack`, `vite`, `parcel`, `snowpack`, `rollup`, `swc`, `esbuild`。
+
+他们面向的使用场景有一些区别，
+
+1. 针对web开发，`webpack`, `vite`, `parcel`, `snowpack`会比较合适一些。
+
+web开发的场景构建比较复杂，要考虑到js，css，html以及图片，字体等一些资源文件的处理，这方面 `webpack`可以说生态是最好的，但是`webpack`的构建速度可能是这几个中比较差的。
+
+2. 针对一些库的开发，`rollup`, `swc`, `esbuild`会比较合适一些。
