@@ -30,11 +30,8 @@ npm, yarn, vite, webpack, babel, swc, esbuild, 都会简单带个例子说明下
 
 主要使用 `vite`, `yarn`。
 
-3. 使用SolidJS前端框架开发。
+3. 前端框架介绍。
 
-普及一些知识：
-
-什么是SolidJS ? 
 什么是组件？
 什么是状态?
 数据驱动的UI，框架帮我们完成绘制，我们负责数据、状态处理
@@ -47,28 +44,26 @@ React Vue
     * 工具编译流: Svelte, SolidJS, Vue
 
 
-4. 纯静态的`Todo-App`，可以使用静态服务器提供服务，数据存储在浏览器。
+4. 纯静态的`Todo-App`。
 
-使用SolidJS来编写。
+可以使用静态服务器提供服务，数据存储在浏览器。
 
-我们使用[`http-server`](https://www.npmjs.com/package/http-server)来提供服务
+5. 带有后端服务的`Todo-App`。
 
+前后端分离开发流程。
 
-5. 带有后端服务的`Todo-App`，前后端开发流程。
+使用`vite`作为前端开发服务器，后端使用`koa`来提供`api`服务。使用`vite`的proxy机制代理请求。
 
-使用vite作为前端开发服务器，后端使用`koa`来提供api服务。使用`vite`的proxy机制代理请求。
+6. 使用一个fullstack的web开发框架。
 
+迁移`05-todo-app-with-api`到`next`。
 
-6. 使用一个fullstack的web开发框架
-
-如果没有找到适合SolidJS的框架，只能使用React的Next.js来解释了。
-
-迁移前端的App，以及之前的API。后端数据存储使用vercel的fauna来存储数据。
+开发：使用`next`开发，数据库使用`PostgreSQL`。
+部署：使用`Vercel`部署，后端数据存储使用`Railway`的`PostgreSQL`来存储数据。
 
 7. 测试
 
-单元测试
-e2e测试
+单元测试和e2e测试。
 
 8. 打包
 
@@ -78,19 +73,17 @@ e2e测试
 
 9. 部署
 
-内网部署：
+1. 内网部署：
 
+    * 纯静态页面的部署
 
-纯静态页面的部署
+    * 带有web服务器的项目的部署
 
-带有web服务器的项目的部署
+2. 公网部署：
 
-公网部署：
+    * 纯静态页面的部署, 可以使用vercel的服务来发布。
 
-纯静态页面的部署, 可以使用vercel的服务来发布。
-
-带有web服务器的项目的部署：如果我们使用next.js编写，那么可以使用vercel的服务来发布。
-
+    * 带有web服务器的项目的部署：使用vercel的服务来发布。
 
 
 ## 知识图谱
