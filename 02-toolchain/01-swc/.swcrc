@@ -1,0 +1,21 @@
+{
+    "minify": false,
+    "jsc": {
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true,
+            "decoratorsBeforeExport": true
+        },
+        "transform": {
+            "legacyDecorator": true,
+            "decoratorMetadata": true
+        },
+        "target": "es5",
+        "loose": false,
+        "externalHelpers": false,
+        "keepClassNames": false
+    },
+    "module": {
+        "type": "commonjs"
+    }
+}

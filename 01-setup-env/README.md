@@ -53,7 +53,7 @@ Node.js是一个开源的跨平台的Javascript运行时环境，内嵌`Google C
 
     > `cd b/c/d/e && npm install lodash`
 
-2. 全局模式：`npm install`的结果会存储到当前使用的`Node.js`的`lib/node_modules`目录下。
+2. 全局模式：`npm install -g`的结果会存储到当前使用的`Node.js`的`lib/node_modules`目录下。
 
     > `npm install -g lodash`
 
@@ -88,7 +88,7 @@ Node.js是一个开源的跨平台的Javascript运行时环境，内嵌`Google C
 2. `cd my-lib`
 3. `npm init`
 4. `mkdir lib && touch lib/index.mjs`
-5. edit package.json
+5. 编辑 package.json
 
     ```json
     {
@@ -96,7 +96,7 @@ Node.js是一个开源的跨平台的Javascript运行时环境，内嵌`Google C
         "main": "lib/index.mjs"
     }
     ```
-6. edit lib/index.mjs
+6. 编辑 lib/index.mjs
 
     ```javascript
     export function ping(message) {

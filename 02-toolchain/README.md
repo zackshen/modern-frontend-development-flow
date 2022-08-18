@@ -18,6 +18,16 @@ Yarn 是一个新的快速安全可信赖的可以替代 NPM 的依赖管理工�
 
 ## vite
 
+`Vite`（法语意为 "快速的"，发音 `/vit/`，发音同 "veet"）是一种新型前端构建工具，能够显著提升前端开发体验。它主要由两部分组成：
+
+一个开发服务器，它基于 原生 ES 模块 提供了 丰富的内建功能，如速度快到惊人的 模块热更新（HMR）。
+
+一套构建指令，它使用 Rollup 打包你的代码，并且它是预配置的，可输出用于生产环境的高度优化过的静态资源。
+
+**浏览器支持**
+
+默认的构建目标是能支持 原生 ESM 语法的 script 标签、原生 ESM 动态导入 和 import.meta 的浏览器。
+
 ## webpack
 
 webpack是一款强大的模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。
@@ -76,14 +86,26 @@ esbuild是用Go编写的 TypeScript / Javascript编译器。
 ## lerna
 
 Lerna 是一个管理工具，用于管理包含多个软件包（package）的 JavaScript 项目。
+类似`Rust`中的`workspace`的概念。
+
+```
+lerna.json
+
+packages
+  package-main # reference package-b, package-c
+  package-b
+  package-c
+```
 
 ## TurboRepo
 
-Turborepo 是 JavaScript 和 TypeScript monorepos 的构建调度工具。
+TurboRepo 是 JavaScript 和 TypeScript monorepos 的构建调度工具。
 
 TurboRepo当前没有版本管理功能（lerna有），但是Turborepo的构建速度比Lerna的要快很多。
 
 TurboRepo会分析构建依赖，发起并行构建，并且使用缓存大大加速了MonoRepo的构建速度。
+
+![turborepo pipline](/images/turbo-vs-lerna-execution.png)
 
 ## 参考
 

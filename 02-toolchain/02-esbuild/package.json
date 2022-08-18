@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.15.5"
+  },
+  "name": "02-esbuild",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "esbuild-darwin-64": "^0.15.5"
+  },
+  "scripts": {
+    "build": "esbuild --bundle --outfile=lib/index.js ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
